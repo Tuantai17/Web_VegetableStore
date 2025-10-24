@@ -1,186 +1,163 @@
 <x-layout-site>
-    <x-slot:title>
-        Trang chủ
-    </x-slot:title>
+    <x-slot:title>Trang chủ</x-slot:title>
 
     <main>
-        <!-- DANH MỤC NỔI BẬT -->
-        <div class="container mx-auto my-12 px-4">
-            <div class="flex items-center justify-center mb-6">
-                <h2 class="text-3xl font-bold text-green-700 flex items-center space-x-2">
+
+        {{-- ===================== DANH MỤC NỔI BẬT ===================== --}}
+        <section class="container my-12">
+            <div class="center mb-6">
+                <h2 class="title-green">
                     <span>Danh mục nổi bật</span>
                     <span>🍃</span>
                 </h2>
             </div>
-            <div class="border-t-2 border-green-500 w-1/3 mx-auto mb-8"></div>
+            <div class="divider w-1-3 mb-8"></div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-                <!-- Danh mục Rau củ -->
+            <div class="featured-grid">
+                {{-- Danh mục Rau củ --}}
                 <a href="{{ route('site.product.byCategory', ['category_slug' => 'rau']) }}">
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg h-56 w-full">
-                        <img src="{{ asset('asset/image/product.jpeg') }}" alt="Rau củ" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-green-300 opacity-0 group-hover:opacity-50 transition-opacity"></div>
-                        <div class="absolute inset-0 flex items-center justify-center flex-col">
-                            <span class="text-white text-xl font-bold tracking-wide">Rau củ</span>
+                    <div class="cat-card">
+                        <img src="{{ asset('asset/image/product.jpeg') }}" alt="Rau củ">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <span class="title light">Rau củ</span>
                         </div>
                     </div>
                 </a>
 
-                <!-- Danh mục Trái cây -->
+                {{-- Danh mục Trái cây --}}
                 <a href="{{ route('site.product.byCategory', ['category_slug' => 'trai-cay']) }}">
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg h-56 w-full">
-                        <img src="{{ asset('asset/image/product2.webp') }}" alt="Trái cây" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-green-300 opacity-0 group-hover:opacity-50 transition-opacity"></div>
-                        <div class="absolute inset-0 flex items-center justify-center flex-col">
-                            <span class="text-slate-800 text-xl font-bold tracking-wide">Trái cây</span>
+                    <div class="cat-card">
+                        <img src="{{ asset('asset/image/product2.webp') }}" alt="Trái cây">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <span class="title dark">Trái cây</span>
                         </div>
                     </div>
                 </a>
 
-                <!-- Danh mục Nấm -->
+                {{-- Danh mục Nấm --}}
                 <a href="{{ route('site.product.byCategory', ['category_slug' => 'nam']) }}">
-                    <div class="relative group overflow-hidden rounded-xl shadow-lg h-56 w-full">
-                        <img src="{{ asset('asset/image/product3.webp') }}" alt="Nấm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-green-300 opacity-0 group-hover:opacity-50 transition-opacity"></div>
-                        <div class="absolute inset-0 flex items-center justify-center flex-col">
-                            <span class="text-white text-xl font-bold tracking-wide">Nấm</span>
+                    <div class="cat-card">
+                        <img src="{{ asset('asset/image/product3.webp') }}" alt="Nấm">
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <span class="title light">Nấm</span>
                         </div>
                     </div>
                 </a>
             </div>
-        </div>
+        </section>
 
-
-
-<br></br>
-        <!-- Dòng dưới video nếu cần thêm -->
-<div class="mt-8 flex flex-wrap justify-center gap-4">
-    <div class="bg-green-100 text-green-800 font-semibold px-5 py-3 rounded-full shadow-md">
-        👋 Xin chào, bạn đến đúng chỗ rồi!
-    </div>
-    <div class="bg-green-100 text-green-800 font-semibold px-5 py-3 rounded-full shadow-md">
-        🥦 Rau sạch, tâm sạch – chỉ cần bạn ghé!
-    </div>
-    <div class="bg-green-100 text-green-800 font-semibold px-5 py-3 rounded-full shadow-md">
-        🚀 Giao nhanh đến mức bạn chưa kịp nấu xong cơm!
-    </div>
-</div>
-<br></br>
-        <div class="relative group flex justify-center items-center">
-    <div class="overflow-hidden rounded-2xl shadow-2xl border-4 border-green-600 w-full max-w-4xl">
-        <video 
-            class="w-full aspect-video object-cover rounded-2xl" 
-            autoplay 
-            loop 
-            playsinline 
-            controls
-        >
-            <source src="{{ asset('asset/video/snaptik_7496256322200014111.mp4') }}" type="video/mp4">
-            Trình duyệt của bạn không hỗ trợ video.
-        </video>
-    </div>
-</div>
-
-
-                <!-- Nội dung
-                <div class="animate-fadeIn delay-100 md:text-left text-center space-y-4 group">
-                    <h2 class="text-3xl font-bold text-green-600 group-hover:text-green-800 transition-all duration-300">
-                        Chúng tôi cung cấp những gì tốt nhất
-                    </h2>
-                    <p class="text-gray-700 text-lg leading-relaxed group-hover:text-gray-800 transition-all">
-                        Trang trại của chúng tôi cung cấp các loại trái cây và rau quả tươi ngon nhất, được lựa chọn cẩn thận và giao đến bạn bằng tất cả tình yêu thương.
-                    </p>
-                    <p class="text-gray-700 text-lg leading-relaxed group-hover:text-gray-800 transition-all">
-                        Chúng tôi tin tưởng vào việc hỗ trợ nông dân địa phương và mang những sản phẩm tươi ngon nhất trực tiếp đến bàn ăn của bạn.
-                    </p>
-                    <ul class="text-gray-600 text-lg space-y-2">
-                        <li>🍎 <b>Tốt cho tim mạch & huyết áp</b></li>
-                        <li>🥦 <b>Giàu chất xơ, hỗ trợ tiêu hóa</b></li>
-                        <li>🍊 <b>Chống oxy hóa, làm đẹp da</b></li>
-                        <li>🥕 <b>Bổ sung vitamin A, C, K cần thiết</b></li>
-                    </ul>
-                </div> -->
+        {{-- ===================== CHIP THÔNG ĐIỆP ===================== --}}
+        <section class="container">
+            <div class="chip-wrap">
+                <div class="chip">👋 Xin chào, bạn đến đúng chỗ rồi!</div>
+                <div class="chip">🥦 Rau sạch, tâm sạch – chỉ cần bạn ghé!</div>
+                <div class="chip">🚀 Giao nhanh đến mức bạn chưa kịp nấu xong cơm!</div>
             </div>
-        </div>
+        </section>
 
-        <!-- SẢN PHẨM MỚI VÀ SALE -->
+        {{-- ===================== VIDEO (nếu cần bật lại) ===================== --}}
+        {{-- 
+        <section class="container my-12">
+            <div class="video-wrap">
+                <div class="video-box">
+                    <video class="video" autoplay loop playsinline controls>
+                        <source src="{{ asset('asset/video/snaptik_7496256322200014111.mp4') }}" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ video.
+                    </video>
+                </div>
+            </div>
+        </section>
+        --}}
+
+        {{-- ===================== SẢN PHẨM ===================== --}}
         <x-product-new />
         <x-product-sale />
 
-        <!-- BÀI VIẾT MỚI -->
-        <div class="container mx-auto">
-            <h1 class="text-4xl font-bold text-center text-gray-800 bg-gradient-to-r from-yellow-100 via-pink-100 to-purple-100 py-4 px-8 rounded-xl shadow-md mb-10">
-                Bài viết mới
-            </h1>
-
-            @foreach ($posts as $post)
-                <x-post-item :postitem="$post" />
-            @endforeach
-        </div>
-
-        <!-- CHỦ ĐỀ -->
-        <div class="container mx-auto mt-12">
-            <h1 class="text-4xl font-bold text-center text-gray-800 bg-gradient-to-r from-yellow-100 via-pink-100 to-purple-100 py-4 px-8 rounded-xl shadow-md mb-10">
-                Chủ đề
-            </h1>
-
-            @foreach ($topics as $topic)
-                <x-topic-item :topicitem="$topic" />
-            @endforeach
-        </div>
-
-        <!-- TIN TỨC MỚI NHẤT -->
-        <div class="w-full border-green-500 p-8 rounded-lg mt-12">
-            <h2 class="text-3xl font-bold text-gray-800 text-center mb-1">TIN TỨC MỚI NHẤT</h2>
-            <p class="text-sm text-gray-500 text-center mb-6">ORGANIC NEWS</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeIn">
-                <!-- Bài viết mẫu -->
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-lg transform transition duration-300">
-                    <img src="{{ asset('asset/image/raucu12.jpeg') }}" alt="Hình bài viết" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Các loại rau củ hữu cơ tốt nhất cho sức khỏe</h3>
-                        <p class="text-sm text-gray-600">Những loại rau củ được trồng theo phương pháp hữu cơ giúp bảo vệ sức khỏe và môi trường...</p>
-                    </div>
-                </div>
-
-                <!-- Các bài khác tương tự -->
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-lg transform transition duration-300">
-                    <img src="{{ asset('asset/image/chebien.webp') }}" alt="Hình bài viết" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Cách chế biến rau củ hữu cơ đúng cách</h3>
-                        <p class="text-sm text-gray-600">Hướng dẫn bạn cách chế biến các loại rau củ hữu cơ để giữ nguyên dinh dưỡng và hương vị...</p>
-                    </div>
-                </div>
-
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-lg transform transition duration-300">
-                    <img src="{{ asset('asset/image/tot.jpg') }}" alt="Hình bài viết" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Lợi ích của việc ăn rau củ sạch mỗi ngày</h3>
-                        <p class="text-sm text-gray-600">Ăn rau củ sạch không chỉ giúp cải thiện sức khỏe mà còn nâng cao chất lượng cuộc sống...</p>
-                    </div>
-                </div>
-
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-lg transform transition duration-300">
-                    <img src="{{ asset('asset/image/thuc-pham-huu-co-5.webp') }}" alt="Hình bài viết" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Thực phẩm hữu cơ - Xu hướng tiêu dùng xanh</h3>
-                        <p class="text-sm text-gray-600">Ngày càng nhiều người lựa chọn thực phẩm hữu cơ như một cách bảo vệ sức khỏe và môi trường...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CSS hiệu ứng -->
+        {{-- ===================== CSS VÁ LAYOUT (không cần Tailwind) ===================== --}}
         <style>
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(20px); }
-                to { opacity: 1; transform: translateY(0); }
+            /* ---- Reset nhe nhàng / base ---- */
+            :root{
+                --green-700:#15803d;
+                --green-500:#22c55e;
+                --slate-800:#0f172a;
             }
-            .animate-fadeIn {
-                animation: fadeIn 1s ease-out forwards;
-            }
-        </style>
+            *{box-sizing:border-box}
+            img{max-width:100%;height:auto;display:block}
 
+            /* ---- Container & các utility đơn giản ---- */
+            .container{max-width:1200px;margin:0 auto;padding:0 16px}
+            .my-12{margin:3rem 0}
+            .mb-6{margin-bottom:1.5rem}
+            .mb-8{margin-bottom:2rem}
+            .w-1-3{width:33.333%}
+
+            .center{display:flex;justify-content:center;align-items:center}
+            .title-green{
+                display:flex;gap:.5rem;align-items:center;justify-content:center;
+                font-size:1.875rem;font-weight:700;color:var(--green-700)
+            }
+            .divider{height:0;border-top:2px solid var(--green-500);margin:0 auto}
+
+            /* ---- Lưới danh mục nổi bật ---- */
+            .featured-grid{
+                display:grid;gap:2rem;
+                grid-template-columns: 1fr;
+            }
+            @media (min-width:640px){ .featured-grid{ grid-template-columns: repeat(2,1fr);} }
+            @media (min-width:768px){ .featured-grid{ grid-template-columns: repeat(3,1fr);} }
+
+            .cat-card{
+                position:relative;height:14rem;border-radius:.75rem;overflow:hidden;
+                box-shadow:0 10px 25px rgba(0,0,0,.08);
+            }
+            .cat-card img{
+                width:100%;height:100%;object-fit:cover;transform:scale(1);
+                transition:transform .5s ease;
+            }
+            .cat-card:hover img{ transform:scale(1.1); }
+            .cat-card .overlay{
+                position:absolute;inset:0;
+                background:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(34,197,94,.45) 100%);
+                opacity:0;transition:opacity .35s ease;
+            }
+            .cat-card:hover .overlay{ opacity:.6; }
+            .cat-card .content{
+                position:absolute;inset:0;display:flex;flex-direction:column;
+                align-items:center;justify-content:center;text-align:center;padding:8px;
+                pointer-events:none;
+            }
+            .cat-card .title{
+                font-weight:700;letter-spacing:.02em;font-size:1.25rem;
+                text-shadow:0 2px 6px rgba(0,0,0,.35);
+            }
+            .cat-card .title.light{color:#fff}
+            .cat-card .title.dark{color:var(--slate-800)}
+
+            /* ---- Chip ---- */
+            .chip-wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem}
+            .chip{
+                background:#dcfce7;color:#166534;font-weight:600;
+                padding:.75rem 1.25rem;border-radius:999px;
+                box-shadow:0 8px 16px rgba(22,101,52,.12)
+            }
+
+            /* ---- Video (tùy chọn) ---- */
+            .video-wrap{display:flex;justify-content:center}
+            .video-box{
+                overflow:hidden;border-radius:1rem;border:4px solid var(--green-600);
+                width:100%;max-width:960px;box-shadow:0 15px 35px rgba(0,0,0,.12)
+            }
+            .video{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:1rem}
+
+            /* ---- Hiệu ứng nhỏ ---- */
+            @keyframes fadeIn{
+                from{opacity:0;transform:translateY(20px)}
+                to{opacity:1;transform:translateY(0)}
+            }
+            .animate-fadeIn{animation:fadeIn 1s ease-out forwards}
+        </style>
     </main>
 </x-layout-site>
