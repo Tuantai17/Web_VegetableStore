@@ -15,7 +15,7 @@
 
             <div class="featured-grid"> {{-- Danh mục Rau củ --}} 
                 <a href="{{ route('site.product.byCategory', ['category_slug' => 'rau']) }}"> 
-                    <div class="cat-card"> <img src="{{ asset('asset/image/ao01.web') }}" alt="Bóng chuyền">
+                    <div class="cat-card"> <img src="{{ asset('asset/image/13.web') }}" alt="Bóng chuyền">
                      <div class="overlay"></div> <div class="content"> <span class="title light">Bóng chuyền</span>
                      </div> </div> </a> {{-- Danh mục Trái cây --}} <a href="{{ route('site.product.byCategory', ['category_slug' => 'trai-cay']) }}">
                          <div class="cat-card"> <img src="{{ asset('asset/image/10.webp') }}" alt="Bóng rổ"> <div class="overlay"></div> <div class="content">
