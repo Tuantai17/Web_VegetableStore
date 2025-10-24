@@ -10,7 +10,7 @@ class Post extends Model
 {
     use HasFactory, SoftDeletes; // ← THÊM SoftDeletes
 
-    protected $table = 'post';
+    protected $table = 'uttt_post';
 
     protected $fillable = [
         'title',

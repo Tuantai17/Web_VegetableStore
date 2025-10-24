@@ -15,7 +15,7 @@ class Contact extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'contact';
+    protected $table = 'uttt_contact';
 
     protected $fillable = [
         'name',
