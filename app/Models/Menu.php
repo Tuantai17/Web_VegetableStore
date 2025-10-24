@@ -9,7 +9,7 @@ class Menu extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'uttt_menu';
+    protected $table = 'menu';
 
     protected $fillable = [
         'name', 'link', 'parent_id', 'sort_order', 'type', 'position',

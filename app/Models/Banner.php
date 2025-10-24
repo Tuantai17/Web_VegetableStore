@@ -9,7 +9,7 @@ class Banner extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'uttt_banner';
+    protected $table = 'banner';
 
     protected $fillable = [
         'name', 'image', 'position', 'sort_order', 'status',

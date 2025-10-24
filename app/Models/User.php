@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable, SoftDeletes;
 
-    protected $table = 'uttt_user'; // ✅ Nếu bảng là 'user' không có 's'
+    protected $table = 'user'; // ✅ Nếu bảng là 'user' không có 's'
 
     protected $fillable = [
         'username',

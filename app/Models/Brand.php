@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Brand extends Model
 {
-    protected $table ='uttt_brand';
+    protected $table ='brand';
     use softDeletes;
     protected $fillable = ['name', 'status','image'];
 

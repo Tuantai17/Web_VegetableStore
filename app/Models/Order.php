@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    protected $table = 'uttt_order';
+    protected $table = 'order';
 
     protected $fillable = [
         'name',

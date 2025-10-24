@@ -25,7 +25,7 @@ class Product extends Model
 {
     use HasFactory, SoftDeletes; // Đảm bảo sử dụng SoftDeletes đúng
 
-    protected $table = 'uttt_product'; // Xác định bảng trong CSDL
+    protected $table = 'product'; // Xác định bảng trong CSDL
 
     protected $fillable = [
         'name',
