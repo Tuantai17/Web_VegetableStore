@@ -204,15 +204,15 @@
   <div class="container banner">
     <div class="slider" id="slider">
       <div class="slides" id="slides">
-        <div class="slide"><img src="{{ asset('asset/image/baner1.jpeg') }}" alt=""></div>
-        <div class="slide"><img src="{{ asset('asset/image/banner_three_1.webp') }}" alt=""></div>
+        <div class="slide"><img src="{{ asset('asset/image/baner.jpeg') }}" alt=""></div>
+        <div class="slide"><img src="{{ asset('asset/image/banner2.webp') }}" alt=""></div>
       </div>
       <button class="nav-btn prev" id="prev" aria-label="Prev"><i class="fa-solid fa-angle-left"></i></button>
       <button class="nav-btn next" id="next" aria-label="Next"><i class="fa-solid fa-angle-right"></i></button>
     </div>
     <div class="ads">
       <img src="{{ asset('asset/image/baner2.jpg') }}" alt="">
-      <img src="{{ asset('asset/image/banner_three_2.webp') }}" alt="">
+      <img src="{{ asset('asset/image/banner11.webp') }}" alt="">
     </div>
   </div>
 
@@ -232,9 +232,9 @@
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
           <img src="{{ asset('asset/image/logo-ft.webp') }}" style="width:68px;height:34px;object-fit:contain">
-          <span style="font-size:20px;font-weight:700">Dola Organic</span>
+          <span style="font-size:20px;font-weight:700">thể thao</span>
         </div>
-        <p style="margin:0 0 10px;font-size:14px;opacity:.9">Cung cấp rau củ quả sạch và an toàn nhất tại Dola Organic.</p>
+        <p style="margin:0 0 10px;font-size:14px;opacity:.9">Thời trang hiện đại.</p>
         <div class="pay">
           <img src="{{ asset('asset/image/payment_1.webp') }}" style="height:20px">
           <img src="{{ asset('asset/image/payment_2.webp') }}" style="height:20px">

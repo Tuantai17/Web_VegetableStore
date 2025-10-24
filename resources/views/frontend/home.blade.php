@@ -49,28 +49,8 @@
             </div>
         </section>
 
-        {{-- ===================== CHIP THÔNG ĐIỆP ===================== --}}
-        <section class="container">
-            <div class="chip-wrap">
-                <div class="chip">👋 Xin chào, bạn đến đúng chỗ rồi!</div>
-                <div class="chip">🥦 Rau sạch, tâm sạch – chỉ cần bạn ghé!</div>
-                <div class="chip">🚀 Giao nhanh đến mức bạn chưa kịp nấu xong cơm!</div>
-            </div>
-        </section>
+       
 
-        {{-- ===================== VIDEO (nếu cần bật lại) ===================== --}}
-        {{-- 
-        <section class="container my-12">
-            <div class="video-wrap">
-                <div class="video-box">
-                    <video class="video" autoplay loop playsinline controls>
-                        <source src="{{ asset('asset/video/snaptik_7496256322200014111.mp4') }}" type="video/mp4">
-                        Trình duyệt của bạn không hỗ trợ video.
-                    </video>
-                </div>
-            </div>
-        </section>
-        --}}
 
         {{-- ===================== SẢN PHẨM ===================== --}}
         <x-product-new />
