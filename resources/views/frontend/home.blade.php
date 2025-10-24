@@ -13,44 +13,19 @@
             </div>
             <div class="divider w-1-3 mb-8"></div>
 
-            <div class="featured-grid">
-                {{-- Danh mục Rau củ --}}
-                <a href="{{ route('site.product.byCategory', ['category_slug' => 'rau']) }}">
-                    <div class="cat-card">
-                        <img src="{{ asset('asset/image/product.jpeg') }}" alt="Rau củ">
-                        <div class="overlay"></div>
-                        <div class="content">
-                            <span class="title light">Rau củ</span>
-                        </div>
-                    </div>
-                </a>
-
-                {{-- Danh mục Trái cây --}}
-                <a href="{{ route('site.product.byCategory', ['category_slug' => 'trai-cay']) }}">
-                    <div class="cat-card">
-                        <img src="{{ asset('asset/image/product2.webp') }}" alt="Trái cây">
-                        <div class="overlay"></div>
-                        <div class="content">
-                            <span class="title dark">Trái cây</span>
-                        </div>
-                    </div>
-                </a>
-
-                {{-- Danh mục Nấm --}}
-                <a href="{{ route('site.product.byCategory', ['category_slug' => 'nam']) }}">
-                    <div class="cat-card">
-                        <img src="{{ asset('asset/image/product3.webp') }}" alt="Nấm">
-                        <div class="overlay"></div>
-                        <div class="content">
-                            <span class="title light">Nấm</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <div class="featured-grid"> {{-- Danh mục Rau củ --}} 
+                <a href="{{ route('site.product.byCategory', ['category_slug' => 'rau']) }}"> 
+                    <div class="cat-card"> <img src="{{ asset('asset/image/ao01.web') }}" alt="Bóng chuyền">
+                     <div class="overlay"></div> <div class="content"> <span class="title light">Bóng chuyền</span>
+                     </div> </div> </a> {{-- Danh mục Trái cây --}} <a href="{{ route('site.product.byCategory', ['category_slug' => 'trai-cay']) }}">
+                         <div class="cat-card"> <img src="{{ asset('asset/image/10.webp') }}" alt="Bóng rổ"> <div class="overlay"></div> <div class="content">
+                             <span class="title dark">Bóng rổ</span> </div> </div> </a> {{-- Danh mục Nấm --}} 
+                             <a href="{{ route('site.product.byCategory', ['category_slug' => 'nam']) }}"> 
+                                <div class="cat-card"> <img src="{{ asset('asset/image/ao0.webp') }}" alt="Bóng Đá"> 
+                                <div class="overlay"></div> <div class="content"> <span class="title light">Bóng đá</span> </div> </div> </a> </div>
         </section>
 
        
-
 
         {{-- ===================== SẢN PHẨM ===================== --}}
         <x-product-new />
