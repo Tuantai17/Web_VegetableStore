@@ -4,6 +4,7 @@
   <main class="max-w-md mx-auto mt-10">
     <h2 class="text-2xl font-bold mb-4">Đăng ký tài khoản</h2>
 
+    {{-- Hiển thị lỗi validate --}}
     @if ($errors->any())
       <div class="bg-red-100 text-red-700 px-4 py-2 rounded mb-4">
         <ul class="list-disc ml-5">
@@ -14,6 +15,7 @@
       </div>
     @endif
 
+    {{-- Hiển thị session thông báo lỗi/success --}}
     @if (session('error'))
       <div class="bg-red-100 text-red-700 px-4 py-2 rounded mb-4">{{ session('error') }}</div>
     @endif
@@ -21,9 +23,11 @@
       <div class="bg-green-100 text-green-700 px-4 py-2 rounded mb-4">{{ session('success') }}</div>
     @endif
 
+    {{-- ================= FORM CHUẨN ĐÃ SỬA ACTION ================= --}}
     <form method="POST" enctype="multipart/form-data"
-          action="{{ route('user.register') }}"
+          action="{{ url('/dang-ky', [], false) }}"
           class="bg-white shadow-md rounded px-8 py-6 space-y-4">
+
       @csrf
 
       <input type="text" name="name" placeholder="Họ và tên"
