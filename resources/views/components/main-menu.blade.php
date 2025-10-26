@@ -8,9 +8,11 @@
                 </a>
             </li>
 
-            {{-- Các mục còn lại từ database --}}
+            {{-- Chỉ hiển thị mục "Product" từ database --}}
             @foreach ($menu_list as $menu_item)
-                <x-main-menu-item :menuitem="$menu_item" />
+                @if ($menu_item->name === 'Product')
+                    <x-main-menu-item :menuitem="$menu_item" />
+                @endif
             @endforeach
         </ul>
     </div>

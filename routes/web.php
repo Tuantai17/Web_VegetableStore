@@ -37,26 +37,20 @@ Route::get('tim-kiem', [HomeController::class, 'searchProduct'])->name('site.pro
 Route::get('danh-muc/{category_slug}', [SanPhamController::class, 'byCategory'])->name('site.product.byCategory');
 
 
-// ...
+// ----- FRONTEND REGISTER -----
 Route::get('dang-ky',  [UserController::class, 'registerForm'])->name('user.register.form');
 Route::post('dang-ky', [UserController::class, 'doRegister'])->name('user.register');
-// ...
+
+// ----- FRONTEND LOGIN (dùng route cũ login.store như bạn yêu cầu) -----
+Route::get('/login', [UserController::class, 'showLoginForm'])->name('site.login');
+Route::post('/loginngdung', [NguoiDungController::class, 'login'])->name('login.store');
 
 
-
-
+// ----- FRONTEND LOGOUT -----
 Route::post('/logout', function () {
     Auth::logout();
     return redirect()->route('user.register.form')->with('success', 'Bạn đã đăng xuất thành công!');
 })->name('logout');
-
-
-// ✅ Route xử lý login frontend
-Route::post('/loginngdung', [NguoiDungController::class, 'login'])->name('login.store');
-Route::get('/loginngdung', [NguoiDungController::class, 'login'])->name('loginngdung');
-
-// Route cho form đăng nhập của shop
-Route::get('/login', [UserController::class, 'showLoginForm'])->name('site.login');
 
 
 

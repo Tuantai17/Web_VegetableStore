@@ -204,15 +204,15 @@
   <div class="container banner">
     <div class="slider" id="slider">
       <div class="slides" id="slides">
-        <div class="slide"><img src="{{ asset('asset/image/baner.jpeg') }}" alt=""></div>
-        <div class="slide"><img src="{{ asset('asset/image/banner2.webp') }}" alt=""></div>
+        <div class="slide"><img src="{{ asset('asset/image/banner2.jpg') }}" alt=""></div>
+        <div class="slide"><img src="{{ asset('asset/image/banner2.jpg') }}" alt=""></div>
       </div>
       <button class="nav-btn prev" id="prev" aria-label="Prev"><i class="fa-solid fa-angle-left"></i></button>
       <button class="nav-btn next" id="next" aria-label="Next"><i class="fa-solid fa-angle-right"></i></button>
     </div>
     <div class="ads">
-      <img src="{{ asset('asset/image/baner2.jpg') }}" alt="">
-      <img src="{{ asset('asset/image/banner11.webp') }}" alt="">
+      <img src="{{ asset('asset/image/banner.webp') }}" alt="">
+      <img src="{{ asset('asset/image/7.jpg') }}" alt="">
     </div>
   </div>
 
@@ -246,9 +246,7 @@
         <h3>Liên Kết Nhanh</h3>
         <ul>
           <li><a href="{{ url('/') }}">Trang Chủ</a></li>
-          <li><a href="{{ url('/about') }}">Giới Thiệu</a></li>
           <li><a href="{{ url('/sanp-pham') }}">Sản Phẩm</a></li>
-          <li><a href="{{ url('/lien-he') }}">Liên Hệ</a></li>
         </ul>
       </div>
 
