@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
         // Ép toàn bộ URL sử dụng HTTPS trong môi trường production (như Render)
         if ($this->app->environment('production')) {
             URL::forceScheme('https');
+             URL::forceRootUrl(config('app.url'));  // <— thêm dòng này
         }
     }
 }
