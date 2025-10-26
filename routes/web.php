@@ -37,16 +37,18 @@ Route::get('tim-kiem', [HomeController::class, 'searchProduct'])->name('site.pro
 Route::get('danh-muc/{category_slug}', [SanPhamController::class, 'byCategory'])->name('site.product.byCategory');
 
 
-// ===== ĐĂNG KÝ (dùng backend\UserController như bạn đang có) =====
+// ...
 Route::get('dang-ky',  [UserController::class, 'registerForm'])->name('user.register.form');
 Route::post('dang-ky', [UserController::class, 'doRegister'])->name('user.register');
+// ...
 
-// ===== ĐĂNG NHẬP NGƯỜI DÙNG: TÁCH GET/POST để tránh 419 =====
-Route::get('/loginngdung',  [NguoiDungController::class, 'showLoginForm'])->name('login.form');
-Route::post('/loginngdung', [NguoiDungController::class, 'login'])->name('login.store');
 
-// ===== ĐĂNG XUẤT NGƯỜI DÙNG =====
 
+
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect()->route('user.register.form')->with('success', 'Bạn đã đăng xuất thành công!');
+})->name('logout');
 
 
 // ✅ Route xử lý login frontend
