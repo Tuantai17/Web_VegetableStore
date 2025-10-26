@@ -37,8 +37,10 @@ Route::get('tim-kiem', [HomeController::class, 'searchProduct'])->name('site.pro
 Route::get('danh-muc/{category_slug}', [SanPhamController::class, 'byCategory'])->name('site.product.byCategory');
 
 
-Route::get('dang-ky', [UserController::class, 'registerForm'])->name('user.register.form');
-Route::post('/dang-ky', [UserController::class, 'doRegister'])->name('user.register');
+// ...
+Route::get('dang-ky',  [UserController::class, 'registerForm'])->name('user.register.form');
+Route::post('dang-ky', [UserController::class, 'doRegister'])->name('user.register');
+// ...
 
 
 
