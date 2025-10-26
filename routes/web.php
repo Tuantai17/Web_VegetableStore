@@ -22,6 +22,16 @@ use App\Http\Controllers\backend\ProductController;
 use App\Http\Controllers\backend\TopicController;
 use App\Http\Controllers\backend\UserController;
 use Illuminate\Support\Facades\Auth;
+
+use App\Http\Controllers\DemoAuthController;
+
+// ... các route khác của bạn (home, product, v.v.)
+
+// ====== AUTH DEMO (không DB) ======
+Route::post('/dang-ky',   [DemoAuthController::class, 'register'])->name('user.register');
+Route::post('/dang-nhap', [DemoAuthController::class, 'login'])->name('login.store');
+Route::post('/dang-xuat', [DemoAuthController::class, 'logout'])->name('logout');
+
 // Frontend routes
 Route::get('/', [HomeController::class, 'index'])->name('site.home');
 Route::get('/san-pham', [SanPhamController::class, 'index'])->name('site.product');

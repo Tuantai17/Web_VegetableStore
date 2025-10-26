@@ -12,7 +12,6 @@
       <h2 class="text-3xl font-semibold text-gray-800 mb-4">Đăng nhập</h2>
       <p class="text-gray-600 mb-6">Vui lòng đăng nhập tài khoản của bạn</p>
 
-      {{-- Thông báo session --}}
       @if (session('success'))
         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded mb-4">
           {{ session('success') }}
@@ -31,15 +30,12 @@
         </div>
       @endif
 
-      {{-- Đăng nhập --}}
       <form action="{{ route('login.store') }}" method="POST" class="w-full">
         @csrf
         <input type="text" name="username" placeholder="Tên đăng nhập / Email"
                class="border border-gray-300 rounded-lg px-4 py-2 w-full mb-4" required>
-
         <input type="password" name="password" placeholder="Mật khẩu"
                class="border border-gray-300 rounded-lg px-4 py-2 w-full mb-4" required>
-
         <button type="submit"
                 class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 w-full">
           Đăng nhập
@@ -53,7 +49,7 @@
     </div>
 
     <div class="w-1/2 bg-cover bg-center relative"
-         style="background-image:url('{{ asset('assets/image/login.jpeg') }}');">
+         style="background-image:url('{{ asset('asset/image/login.jpeg') }}');">
       <div class="absolute inset-0 bg-black/40"></div>
     </div>
   </div>

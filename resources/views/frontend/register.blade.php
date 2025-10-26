@@ -4,7 +4,6 @@
   <main class="max-w-md mx-auto mt-10">
     <h2 class="text-2xl font-bold mb-4">Đăng ký tài khoản</h2>
 
-    {{-- Thông báo lỗi --}}
     @if ($errors->any())
       <div class="bg-red-100 text-red-700 px-4 py-2 rounded mb-4">
         <ul class="list-disc ml-5">
@@ -15,7 +14,6 @@
       </div>
     @endif
 
-    {{-- Thông báo session --}}
     @if (session('error'))
       <div class="bg-red-100 text-red-700 px-4 py-2 rounded mb-4">{{ session('error') }}</div>
     @endif
@@ -48,16 +46,13 @@
 
       <input type="text" name="phone" placeholder="Số điện thoại"
              class="w-full p-2 border rounded"
-             value="{{ old('phone') }}" required>
+             value="{{ old('phone') }}">
 
       <input type="text" name="address" placeholder="Địa chỉ"
              class="w-full p-2 border rounded"
-             value="{{ old('address') }}" required>
+             value="{{ old('address') }}">
 
-      {{-- Avatar không bắt buộc nữa --}}
-      <input type="file" name="avatar"
-             class="w-full p-2 border rounded"
-             accept="image/*">
+      <input type="file" name="avatar" class="w-full p-2 border rounded" accept="image/*">
 
       <button type="submit"
               class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 w-full">
