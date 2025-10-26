@@ -16,8 +16,11 @@
             </div>
         @endif
 
-        <form action="{{ route('user.register') }}" method="POST" enctype="multipart/form-data" class="bg-white shadow-md rounded px-8 py-6 space-y-4">
+        {{-- Không set action -> POST về chính URL hiện tại (HTTPS) --}}
+        <form method="POST" enctype="multipart/form-data"
+              class="bg-white shadow-md rounded px-8 py-6 space-y-4">
             @csrf
+
             <input type="text" name="name" placeholder="Họ và tên" class="w-full p-2 border rounded" required>
             <input type="text" name="username" placeholder="Tên đăng nhập" class="w-full p-2 border rounded" required>
             <input type="email" name="email" placeholder="Email" class="w-full p-2 border rounded" required>
